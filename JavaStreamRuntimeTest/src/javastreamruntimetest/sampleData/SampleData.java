@@ -11,7 +11,6 @@ import java.util.Random;
 public class SampleData {
 
     /**
-     * 
      * @return List with 100000 random numbers
      */
     public static List<Integer> getIntList() {
