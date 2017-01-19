@@ -1,4 +1,4 @@
-package runtimeTest;
+package javastreamruntimetest;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package runtimeTest.sampleData;
+package javastreamruntimetest.sampleData;
 
 import java.util.LinkedList;
 import java.util.List;

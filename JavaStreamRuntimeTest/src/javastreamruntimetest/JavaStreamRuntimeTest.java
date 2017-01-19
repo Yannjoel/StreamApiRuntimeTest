@@ -5,6 +5,9 @@
  */
 package javastreamruntimetest;
 
+import java.util.List;
+import javastreamruntimetest.sampleData.SampleData;
+
 /**
  *
  * @author Yannick
@@ -15,7 +18,9 @@ public class JavaStreamRuntimeTest {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        List<Integer> sampleIntList = SampleData.getIntList();
+        SumUp.withForLoop(sampleIntList);
+        SumUp.withItterator(sampleIntList);
+        SumUp.addAllStream(sampleIntList);
     }
-    
 }
