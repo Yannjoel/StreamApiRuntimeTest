@@ -48,4 +48,16 @@ public class SumUp {
         System.out.println("Result: " + total);
         System.out.println("Duration: " + (end - start) + "ms");
     }
+
+    static void arrayWithForLoop(int[] data) {
+        System.out.println("Array with forLoop");
+        long start = System.currentTimeMillis();
+        int total = 0;
+        for (int i = 0; i < data.length; i++) {
+            total += data[i];
+        }
+        long end = System.currentTimeMillis();
+        System.out.println("Result: " + total);
+        System.out.println("Duration: " + (end - start) + "ms");
+    }
 }

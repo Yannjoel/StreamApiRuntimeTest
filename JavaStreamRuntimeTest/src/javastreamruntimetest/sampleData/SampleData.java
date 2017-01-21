@@ -10,15 +10,26 @@ import java.util.Random;
  */
 public class SampleData {
 
+    private final static Random RAND = new Random();
+    private static int itr;
+    
     /**
      * @param size
      * @return List with  random numbers
      */
     public static List<Integer> getIntList(int size) {
         ArrayList<Integer> sampleList = new ArrayList<>();
-        Random rand = new Random();
-        rand.ints(size).forEach(( num)-> sampleList.add(num));
+        RAND.ints(size).forEach(( num)-> sampleList.add(num));
         return sampleList;
     }
     
+    public static int[] getIntArray(int size) {
+        int[] sampleArray = new int[size];
+        itr = 0;
+        RAND.ints(size).forEach((num)-> {
+            sampleArray[itr]=num;
+            itr++;
+        });
+        return sampleArray;
+    }
 }
