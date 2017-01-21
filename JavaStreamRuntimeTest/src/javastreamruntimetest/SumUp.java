@@ -7,7 +7,7 @@ import java.util.List;
  * @author Yannick
  */
 public class SumUp {
-      public static void withForLoop(List<Integer> data) {
+    public static void withForLoop(List<Integer> data) {
         System.out.println("For-loop:");
         long start = System.currentTimeMillis();
         int listLenght = data.size();
@@ -16,8 +16,8 @@ public class SumUp {
             total += data.get(i);
         }
         long end = System.currentTimeMillis();
-        System.out.println("Ergebniss: " + total);
-        System.out.println("Dauer: " + (end - start) + "ms");
+        System.out.println("Result: " + total);
+        System.out.println("Duration: " + (end - start) + "ms");
     }
 
     public static void withItterator(List<Integer> data) {
@@ -28,16 +28,24 @@ public class SumUp {
             total += num;
         }
         long end = System.currentTimeMillis();
-        System.out.println("Ergebniss: " + total);
-        System.out.println("Dauer: " + (end - start) + "ms");
+        System.out.println("Result: " + total);
+        System.out.println("Duration: " + (end - start) + "ms");
     }
 
-    public static void addAllStream(List<Integer> data) {
+    public static void withNormalStream(List<Integer> data) {
         System.out.println("Stream");
         long start = System.currentTimeMillis();
         int total = data.stream().mapToInt(num -> num).sum();
         long end = System.currentTimeMillis();
-        System.out.println("Ergebniss: " + total);
-        System.out.println("Dauer: " + (end - start) + "ms");
+        System.out.println("Result: " + total);
+        System.out.println("Duration: " + (end - start) + "ms");
+    }
+    public static void withParallelStream(List<Integer> data) {
+        System.out.println("ParallelStream");
+        long start = System.currentTimeMillis();
+        int total = data.parallelStream().mapToInt(num->num).sum();
+        long end = System.currentTimeMillis();
+        System.out.println("Result: " + total);
+        System.out.println("Duration: " + (end - start) + "ms");
     }
 }

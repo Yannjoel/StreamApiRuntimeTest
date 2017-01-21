@@ -10,7 +10,7 @@ import java.util.Properties;
 public class DatabaseInitializer {
 
     public static void main(String[] args) throws Exception {
-        initProductivDatabase();
+        initDatabase();
     }
     
     
@@ -20,7 +20,7 @@ public class DatabaseInitializer {
      * @throws SQLException
      * @throws Exception
      */
-    public static void initProductivDatabase() throws SQLException, Exception {
+    public static void initDatabase() throws SQLException, Exception {
         if (reallyInitializeDb()) {
             Properties properties = DbAccessPropertiesReader.getProperties();
             String databaseName = properties.getProperty("mysqlproductivdatabase");

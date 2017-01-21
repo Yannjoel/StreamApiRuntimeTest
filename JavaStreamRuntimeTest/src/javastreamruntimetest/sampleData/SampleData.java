@@ -1,6 +1,6 @@
 package javastreamruntimetest.sampleData;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -11,12 +11,13 @@ import java.util.Random;
 public class SampleData {
 
     /**
-     * @return List with 100000 random numbers
+     * @param size
+     * @return List with  random numbers
      */
-    public static List<Integer> getIntList() {
-        LinkedList<Integer> sampleList = new LinkedList<>();
+    public static List<Integer> getIntList(int size) {
+        ArrayList<Integer> sampleList = new ArrayList<>();
         Random rand = new Random();
-        rand.ints(100000).forEach(( num)-> sampleList.add(num));
+        rand.ints(size).forEach(( num)-> sampleList.add(num));
         return sampleList;
     }
     
