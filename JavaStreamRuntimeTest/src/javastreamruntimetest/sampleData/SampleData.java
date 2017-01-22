@@ -17,7 +17,18 @@ public class SampleData {
      * @param size
      * @return List with  random numbers
      */
-    public static List<Integer> getIntList(int size) {
+    public static List<Integer> getIntArrayList(int size) {
+        ArrayList<Integer> sampleList = new ArrayList<>();
+        RAND.ints(size).forEach(( num)-> sampleList.add(num));
+        return sampleList;
+    }
+    
+        
+    /**
+     * @param size
+     * @return List with  random numbers
+     */
+    public static List<Integer> getIntLinkedList(int size) {
         ArrayList<Integer> sampleList = new ArrayList<>();
         RAND.ints(size).forEach(( num)-> sampleList.add(num));
         return sampleList;

@@ -18,7 +18,13 @@ public class JavaStreamRuntimeTest {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        List<Integer> sampleIntList = SampleData.getIntList(10000000);
+        List<Integer> sampleIntList = SampleData.getIntArrayList(10000000);
+        SumUp.withForLoop(sampleIntList);
+        SumUp.withItterator(sampleIntList);
+        SumUp.withNormalStream(sampleIntList);
+        SumUp.withParallelStream(sampleIntList);
+        
+        sampleIntList = SampleData.getIntLinkedList(10000000);
         SumUp.withForLoop(sampleIntList);
         SumUp.withItterator(sampleIntList);
         SumUp.withNormalStream(sampleIntList);
